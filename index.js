@@ -34,7 +34,7 @@ client.on('message', msg => {
 
    if (msg.content.includes( "DM",0)) {
    	   msg.delete(0);
-   	   msg.author.sendMessage("hello");
+   	   msg.author.send("hello");
    }
    	   
    })
