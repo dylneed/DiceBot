@@ -36,7 +36,7 @@ client.on('message', msg => {
       {message.delete();
       mentionMessage = message.content.slice(4);
       mention.sendMessage(mentionMessage);
-      message.channel.send("Message sent to" + message.mentions.users.first();)}
+      message.channel.send("Message sent to" + message.mentions.users.first());}
    }})
 
 
