@@ -37,7 +37,7 @@ client.on('message', msg => {
         {msg.reply('Fuck you ')}
 
    var mention = msg.mentions.users.first();
-   if (msg.content.startswith( "&&DM", 0)){
+   if (msg.content.startswith( "&&DM")){
    	   if (mention === null) {return;}
       msg.delete();
       var mentionMessage = msg.split(mention)[1];
