@@ -36,9 +36,9 @@ client.on('message', msg => {
     if (msg.content.includes( "up up down down left right left right b a" , 0)) 
         {msg.reply('Fuck you ')}
 
-   var mention = msg.mentions.users.first();
-   if (msg.content.startswith( "&&DM")){
-   	   if (mention === null) {return;}
+   var mention = msg.mentions.members.first();
+   if (msg.content.startswith( "&&DM")) {
+   	   if (mention == null) {return ;}
       msg.delete();
       var mentionMessage = msg.split(mention)[1];
       mention.send(mentionMessage);
