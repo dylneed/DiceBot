@@ -33,10 +33,10 @@ client.on('message', msg => {
    var mention = msg.mentions.users.first();
    if (msg.content.startswith( "&&DM", 0)){
    	   if (mention == null) {return;}
-      msg.delete (0);
-      var mentionMessage = msg.content.slice (3);
-      mention.sendMessage (mentionMessage);
-      msg.channel.send ("Transmission Sent");
+      msg.delete();
+      var mentionMessage = msg.content.slice(3);
+      mention.sendMessage(mentionMessage);
+      msg.channel.send("Transmission Sent");
    }})
 
 
