@@ -4,11 +4,17 @@ return (1 + Math.floor(n * Math.random()));}
 function Convert(spliter, string) {
 	return parseInt(string.split(spliter)[1])
 }
+
 function NumToLettBad(n) {
 if (n === 1) {return 'A'} else
 if (n === 2) {return 'B'} else
 if (n === 3) {return 'C'} else
 if (n === 4) {return 'D'}}
+
+function DM(subject, string) {
+	subject.sendMessage(string);
+	
+}
 
 
 const Discord = require('discord.js'); 
@@ -32,11 +38,11 @@ client.on('message', msg => {
    
    mention = msg.mentions.users.first();
    if (msg.content.startswith( "&&DM", 0)){
-   	   if (mention == null) {return;}
-      msg.delete();
+   	   if (mention == null) {return;} else
+      {msg.delete();
       mentionMessage = msg.split(mention)[1];
       mention.sendMessage(mentionMessage);
-      msg.channel.send("Transmission Sent");
+       msg.channel.send("Transmission Sent");}
    }})
 
 
