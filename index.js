@@ -38,7 +38,7 @@ client.on('message', msg => {
    	   to.send(out);
    msg.delete(0);}
    	   
-   }})
+   })
 
 
 
