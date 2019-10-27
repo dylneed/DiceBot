@@ -32,8 +32,8 @@ client.on('message', msg => {
     if (msg.content.includes( "up up down down left right left right b a" , 0)) 
         {msg.reply('Fuck you ')}
 
-   if (msg.content.includes( "&&DM",0)) {
-   	   var to = msg.mentions.members.first();
+   if (msg.content.includes( "DM",0)) {
+   	   var to = msg.mentions.user.first();
    	   var out = msg.split(to)[1];
    	   to.send(out);
    msg.delete(0);}
