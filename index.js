@@ -34,7 +34,7 @@ client.on('message', msg => {
    if (msg.content.startswith( "&&DM", 0)){
    	   if (mention == null) {return;}
       msg.delete (0);
-      var mentionMessage = message.content.slice (3);
+      var mentionMessage = msg.content.slice (3);
       mention.sendMessage (mentionMessage);
       msg.channel.send ("Transmission Sent");
    }})
