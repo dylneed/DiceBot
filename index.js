@@ -11,10 +11,6 @@ if (n === 2) {return 'B'} else
 if (n === 3) {return 'C'} else
 if (n === 4) {return 'D'}}
 
-function DM(subject, string) {
-	subject.sendMessage(string);
-	
-}
 
 
 const Discord = require('discord.js'); 
@@ -36,12 +32,12 @@ client.on('message', msg => {
     if (msg.content.includes( "up up down down left right left right b a" , 0)) 
         {msg.reply('Fuck you ')}
 
-   var mention = msg.mentions.members.first();
-   if (msg.content.startswith( "&&DM")) {
-   	   if (mention == null) {return ;}
-      msg.delete();
-      var mentionMessage = msg.split(mention)[1];
-      mention.send(mentionMessage);
+   if (msg.content.includes( "&&DM",0)) {
+   	   var to = msg.mentions.members.first();
+   	   var out = msg.split(to)[1];
+   	   to.send(out);
+   msg.delete(0);}
+   	   
    }})
 
 
