@@ -33,10 +33,7 @@ client.on('message', msg => {
         {msg.reply('Fuck you ')}
 
    if (msg.content.includes( "DM",0)) {
-   	   var to = msg.mentions.members.first();
-   	   var out = msg.split(to)[1];
-   	   to.send(out);
-   msg.delete(0);}
+   	   msg.delete(0);}
    	   
    })
 
