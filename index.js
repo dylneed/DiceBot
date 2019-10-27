@@ -31,11 +31,12 @@ client.on('message', msg => {
         {msg.reply('Fuck you ')}
    
    var mention = message.mentions.users.first();
-   if (msg.content.includes( "&&DM", 0)){
+   if (msg.content.startswith( "&&DM", 0)){
    	   if (mention == null) {return;}
       message.delete();
-      var mentionMessage = message.content.slice(4);
+      var mentionMessage = message.content.slice (4);
       mention.sendMessage (mentionMessage);
+      message.channel.send ("Transmission Sent");
    }})
 
 
