@@ -44,7 +44,7 @@ client.on('message', msg => {
       mention.sendMessage(mentionMessage);
        msg.channel.send("Transmission Sent");}
        */
-       msg.reply(mention)
+       msg.reply(mention);
    }})
 
 
