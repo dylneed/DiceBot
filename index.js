@@ -33,9 +33,9 @@ client.on('message', msg => {
    var mention = message.mentions.users.first();
    if (msg.content.includes( "&&DM", 0)){
    	   if (mention == null) {return;}
-      {message.delete();
+      message.delete();
       var mentionMessage = message.content.slice(4);
-      mention.sendMessage(mentionMessage);}
+      mention.sendMessage (mentionMessage);
    }})
 
 
