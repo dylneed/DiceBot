@@ -34,10 +34,8 @@ client.on('message', msg => {
     if (msg.content.includes( "up up down down left right left right b a" , 0)) 
         {msg.reply('Fuck you ')}
 
-   if (msg.content.includes( "&&DM",0)) {
-   	   to = msg.mentions.users.first();
-   	   msg.to.sendMessage("hello");
-   	   msg.delete();
+   if (msg.content.includes( "Chameleon",0)) {
+   	   msg.reply(msg.mentions.users.first());
    }
    	   
    })
