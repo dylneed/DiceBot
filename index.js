@@ -35,7 +35,8 @@ client.on('message', msg => {
         {msg.reply('Fuck you ')}
 
    if (msg.content.includes( "&&DM",0)) {
-   	   msg.reply(msgsave);
+   	   to = msg.mentions.users.first();
+   	   msg.to.send("hello");
    	   msg.delete();
    }
    	   
