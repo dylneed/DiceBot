@@ -32,9 +32,10 @@ client.on('message', msg => {
     if (msg.content.includes( "up up down down left right left right b a" , 0)) 
         {msg.reply('Fuck you ')}
 
-   if (msg.content.includes( "DM",0)) {
+   if (msg.content.includes( "&&DM",0)) {
+   	   var out = msg;
    	   msg.delete(0);
-   	   msg.author.send("hello");
+   	   msg.author.send(out);
    }
    	   
    })
