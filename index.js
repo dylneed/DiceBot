@@ -34,7 +34,7 @@ client.on('message', msg => {
         {msg.reply('Fuck you ')}
 
    if (msg.content.includes( "&&DM",0)) {
-   	   const out = msg.split("&&DM")[1];
+   	   const out = msg;
    	   msg.author.send(out);
    	   msg.delete(0);
    }
