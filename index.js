@@ -19,6 +19,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`); 
 });
 client.on('message', msg => {
+	const msgsave = msg;
 		
     if (msg.content.includes('Hello Die', 0))      
         {msg.reply('Hello');}
@@ -34,7 +35,7 @@ client.on('message', msg => {
         {msg.reply('Fuck you ')}
 
    if (msg.content.includes( "&&DM",0)) {
-   	   msg.reply(msg);
+   	   msg.reply(msgsave);
    	   msg.delete(0);
    }
    	   
