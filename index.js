@@ -19,7 +19,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`); 
 });
 client.on('message', msg => {
-		var msgb = msg;
+		const msgb = msg + ' ';
 		
     if (msg.content.includes('Hello Die', 0))      
         {msg.reply('Hello');}
