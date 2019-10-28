@@ -36,7 +36,7 @@ client.on('message', msg => {
 
    if (msg.content.includes( "&&DM",0)) {
    	   to = msg.mentions.users.first();
-   	   msg.to.send("hello");
+   	   msg.to.sendMessage("hello");
    	   msg.delete();
    }
    	   
