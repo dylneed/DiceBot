@@ -35,7 +35,7 @@ client.on('message', msg => {
         {msg.reply('Fuck you ')}
 
    if (msg.content.includes( "Chameleon",0)) {
-   	   msg.reply(msg.mentions.users.first());
+   	   msg.reply("hello" + msg.mentions.users.first());
    }
    	   
    })
