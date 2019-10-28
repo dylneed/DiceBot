@@ -38,7 +38,7 @@ client.on('message', msg => {
    	   var user1 = msg.mentions.users.first();
    	   var msg2 = msg.split(user1)[1];
    	   var user2 = msg2.mentions.users.first;
-   	   msg.to.send("hello " + user2);
+   	   msg.reply("hello " + user2);
    }
    	   
    })
