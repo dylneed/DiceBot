@@ -4,225 +4,15 @@ return (1 + Math.floor(n * Math.random()));}
 function Convert(spliter, string) {
 	return parseInt(string.split(spliter)[1])
 }
-/*s
+
 function NumToLettBad(n) {
 if (n === 1) {return 'A'} else
 if (n === 2) {return 'B'} else
 if (n === 3) {return 'C'} else
 if (n === 4) {return 'D'}}
 
-function Cham(str) {
-	var tile = (NumToLettBad(Roll(4)) + Roll(4));
-	
-	var stra = str.split(str,1);
-	var a = str.mentions.users.first();
-	
-	if (d == null) {var choose = Roll(3);
-					if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");}} else
-	if (e == null) {var choose = Roll(4);
-	                if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);
-					                 d.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");
-					                 d.send(tile);} else
-	                if (choose = 4) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send("You Are The Chameleon");}} else
-	if (f == null) {var choose = Roll(5);
-	                if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");
-					                 d.send(tile);
-					                 e.send(tile);} else
-	                if (choose = 4) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send("You Are The Chameleon");
-	                                 e.send(tile);} else
-	                if (choose = 5) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-	                                 e.send("You Are The Chameleon");}} else
-	if (g == null) {var choose = Roll(6);
-	                if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);} else
-	                if (choose = 4) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send("You Are The Chameleon");
-	                                 e.send(tile);
-	                                 f.send(tile);} else
-	                if (choose = 5) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-	                                 e.send("You Are The Chameleon");
-	                                 f.send(tile);} else
-	               if (choose = 6) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send("You Are The Chameleon");}} else
-	if (h == null) {var choose = Roll(7);
-	                if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);} else
-	                if (choose = 4) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send("You Are The Chameleon");
-	                                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);} else
-	                if (choose = 5) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-	                                 e.send("You Are The Chameleon");
-	                                 f.send(tile);
-	                				 g.send(tile);} else
-	               if (choose = 6) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send("You Are The Chameleon");
-	                				g.send(tile);} else
-	               if (choose = 7) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send(tile);
-	                				g.send("You Are The Chameleon");}} else
-				   {var choose = Roll(8);
-	                if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);
-	                                 h.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);
-	                                 h.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);
-	                                 h.send(tile);} else
-	                if (choose = 4) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send("You Are The Chameleon");
-	                                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);
-	                                 h.send(tile);} else
-	                if (choose = 5) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-	                                 e.send("You Are The Chameleon");
-	                                 f.send(tile);
-	                				 g.send(tile);
-	                                 h.send(tile);} else
-	               if (choose = 6) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send("You Are The Chameleon");
-	                				g.send(tile);
-	                                 h.send(tile);} else
-	               if (choose = 7) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send(tile);
-	                				g.send("You Are The Chameleon");
-	                                h.send(tile);} else
-	               if (choose = 8) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send(tile);
-	                				g.send(tile);
-	                                h.send("You Are The Chameleon");}}
-}*/
+
+
 
 
 const Discord = require('discord.js'); 
@@ -242,21 +32,510 @@ client.on('message', msg => {
     	{msg.reply(Roll(Convert('roll ',msg.content)));}
     	
     	
-    if (msg.content.includes( "up up down down left right left right b a" , 0)) 
+    if (msg.content.includes("up up down down left right left right b a" , 0)) 
         {msg.reply('Fuck you ')}
-/*
-   if (msg.content.startsWith( "Chameleon")) {
-   	  /// msg.reply(String(msg));
-   	  ///Cham(String(msg));
-   	  var a = msg.mentions.users.first();
-   msg.reply(a);}*/
-   	   
+
+   if (msg.content.startsWith("Whisper",0)) {
+   	  user = msg.mentions.members.first();
+   	  str = msg.content;
+   	  out = str.split(">")[1];
+   	  user.send(" " + out);
+   	  msg.delete();
+   }
+   
+   if (msg.content.startsWith("Chameleon")) {
+   	   // syntax: Chameleon <#> <@user1> ... <@user#>
+   	   str  = msg.content;
+   	   tile = NumToLettBad(4) + Roll(4);
+   	   cham = "You are the Chameleon"
+   	   num  = str.split(" ").length - 1;
+   	   deal = Roll(num);
+   	   if (num < 3) {msg.reply("That's not enough people silly")} else
+   	   if (num == 3) {
+   	   	   if (deal == 1) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   } else
+   	   	   if (deal == 2) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   } else
+   	   	   if (deal == 3) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + cham);
+   	   	   }
+   	   }
+   	   if (num == 4) {
+   	   	   if (deal == 1) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile)
+   	   	   } else
+   	   	   if (deal == 2) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	       client.channels.get(`615967798488858624`).send(
+   	   	       	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   } else
+   	   	   if (deal == 3) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   } else
+   	   	  if (deal == 4) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + cham);
+   	   	   } 
+   	   } else
+   	   if (num == 5) {
+   	   	   if (deal == 1) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   } else
+   	   	   if (deal == 2) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	       client.channels.get(`615967798488858624`).send(
+   	   	       	   "Whisper" + str.split(" ")[4] + tile);
+   	   	       client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   } else
+   	   	   if (deal == 3) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   } else
+   	   	  if (deal == 4) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   } else
+   	   	   if (deal == 5) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + cham);
+   	   	   }
+   	   } else
+   	   if (num == 6) {
+   	   	   if (deal == 1) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile); 
+   	   	   } else
+   	   	   if (deal == 2) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	       client.channels.get(`615967798488858624`).send(
+   	   	       	   "Whisper" + str.split(" ")[4] + tile);
+   	   	       client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile); 
+   	   	   } else
+   	   	   if (deal == 3) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile); 
+   	   	   } else
+   	   	  if (deal == 4) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile); 
+   	   	   } else
+   	   	   if (deal == 5) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile); 
+   	   	   } else
+   	   	   if (deal == 6) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + cham);
+   	   	   }
+   	   } else
+   	   if (num == 7) {
+   	   	   if (deal == 1) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   } else
+   	   	   if (deal == 2) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	       client.channels.get(`615967798488858624`).send(
+   	   	       	   "Whisper" + str.split(" ")[4] + tile);
+   	   	       client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   } else
+   	   	   if (deal == 3) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   } else
+   	   	  if (deal == 4) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   } else
+   	   	   if (deal == 5) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   } else
+   	   	   if (deal == 6) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + tile);
+   	   	   }
+   	   	   if (deal == 7) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   }
+   	   } else
+   	   if (num == 8) {
+   	   	   if (deal == 1) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[8] + tile);
+   	   	   } else
+   	   	   if (deal == 2) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	       client.channels.get(`615967798488858624`).send(
+   	   	       	   "Whisper" + str.split(" ")[4] + tile);
+   	   	       client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[8] + tile);
+   	   	   } else
+   	   	   if (deal == 3) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[8] + tile);
+   	   	   } else
+   	   	  if (deal == 4) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[8] + tile);
+   	   	   } else
+   	   	   if (deal == 5) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[8] + tile);
+   	   	   } else
+   	   	   if (deal == 6) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[8] + tile);
+   	   	   }
+   	   	   if (deal == 7) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[8] + tile);
+   	   	   }
+   	   	   if (deal == 8) {
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[1] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[2] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[3] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[7] + tile);
+   	   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   	   	   "Whisper" + str.split(" ")[8] + cham);
+   	   	   }
+   	   }  	   
+   }
+   	
+   
    })
 
 
 
 
-
+//615967798488858624
 
 
 

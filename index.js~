@@ -11,217 +11,220 @@ if (n === 2) {return 'B'} else
 if (n === 3) {return 'C'} else
 if (n === 4) {return 'D'}}
 
-function Cham(str) {
+
+function whisper(user, string){
+	user.send(string);
+}
+
+
+function Cham(waste,a,b,c,d,e,f,g) {
 	var tile = (NumToLettBad(Roll(4)) + Roll(4));
 	
-	var stra = str.split(str,1);
-	var a = str.mentions.users.first();
-	
 	if (d == null) {var choose = Roll(3);
-					if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");}} else
+					if (choose = 1) {whisper(a,"You Are The Chameleon");
+									 whisper(b, tile);
+									 whisper(c,tile);} else
+	                if (choose = 2) {whisper(a,tile);
+									 whisper(b,"You Are The Chameleon");
+									 whisper(c,tile);} else
+				    if (choose = 3) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,"You Are The Chameleon");}} else
 	if (e == null) {var choose = Roll(4);
-	                if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);
-					                 d.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");
-					                 d.send(tile);} else
-	                if (choose = 4) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send("You Are The Chameleon");}} else
+	                if (choose = 1) {whisper(a,"You Are The Chameleon");
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,tile);} else
+	                if (choose = 2) {whisper(a,tile);
+									 whisper(b,"You Are The Chameleon");
+									 whisper(c,tile);
+					                 whisper(d,tile);} else
+				    if (choose = 3) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,"You Are The Chameleon");
+					                 whisper(d,tile);} else
+	                if (choose = 4) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,"You Are The Chameleon");}} else
 	if (f == null) {var choose = Roll(5);
-	                if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");
-					                 d.send(tile);
-					                 e.send(tile);} else
-	                if (choose = 4) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send("You Are The Chameleon");
-	                                 e.send(tile);} else
-	                if (choose = 5) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-	                                 e.send("You Are The Chameleon");}} else
+	                if (choose = 1) {whisper(a,"You Are The Chameleon");
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,tile);
+					                 whisper(e,tile);} else
+	                if (choose = 2) {whisper(a,tile);
+									 whisper(b,"You Are The Chameleon");
+									 whisper(c,tile);
+					                 whisper(d,tile);
+					                 whisper(e,tile);} else
+				    if (choose = 3) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,"You Are The Chameleon");
+					                 whisper(d,tile);
+					                 whisper(e,tile);} else
+	                if (choose = 4) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,"You Are The Chameleon");
+	                                 whisper(e,tile);} else
+	                if (choose = 5) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,tile);
+	                                 whisper(e,"You Are The Chameleon");}} else
 	if (g == null) {var choose = Roll(6);
-	                if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);} else
-	                if (choose = 4) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send("You Are The Chameleon");
-	                                 e.send(tile);
-	                                 f.send(tile);} else
-	                if (choose = 5) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-	                                 e.send("You Are The Chameleon");
-	                                 f.send(tile);} else
-	               if (choose = 6) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send("You Are The Chameleon");}} else
+	                if (choose = 1) {whisper(a,"You Are The Chameleon");
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,tile);
+					                 whisper(e,tile);
+	                                 whisper(f,tile);} else
+	                if (choose = 2) {whisper(a,tile);
+									 whisper(b,"You Are The Chameleon");
+									 whisper(c,tile);
+					                 whisper(d,tile);
+					                 whisper(e,tile);
+	                                 whisper(f,tile);} else
+				    if (choose = 3) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,"You Are The Chameleon");
+					                 whisper(d,tile);
+					                 whisper(e,tile);
+	                                 whisper(f,tile);} else
+	                if (choose = 4) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,"You Are The Chameleon");
+	                                 whisper(e,tile);
+	                                 whisper(f,tile);} else
+	                if (choose = 5) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,tile);
+	                                 whisper(e,"You Are The Chameleon");
+	                                 whisper(f,tile);} else
+	               if (choose = 6) {whisper(a,tile);
+								    whisper(b,tile);
+									whisper(c,tile);
+					                whisper(d,tile);
+	                                whisper(e,tile);
+									whisper(f,"You Are The Chameleon");}} else
 	if (h == null) {var choose = Roll(7);
-	                if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);} else
-	                if (choose = 4) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send("You Are The Chameleon");
-	                                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);} else
-	                if (choose = 5) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-	                                 e.send("You Are The Chameleon");
-	                                 f.send(tile);
-	                				 g.send(tile);} else
-	               if (choose = 6) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send("You Are The Chameleon");
-	                				g.send(tile);} else
-	               if (choose = 7) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send(tile);
-	                				g.send("You Are The Chameleon");}} else
+	                if (choose = 1) {whisper(a,"You Are The Chameleon");
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,tile);
+					                 whisper(e,tile);
+	                                 whisper(f,tile);
+	                				 whisper(g,tile);} else
+	                if (choose = 2) {whisper(a,tile);
+									 whisper(b,"You Are The Chameleon");
+									 whisper(c,tile);
+					                 whisper(d,tile);
+					                 whisper(e,tile);
+	                                 whisper(f,tile);
+	                				 whisper(g,tile);} else
+				    if (choose = 3) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,"You Are The Chameleon");
+					                 whisper(d,tile);
+					                 whisper(e,tile);
+	                                 whisper(f,tile);
+	                				 whisper(g,tile);} else
+	                if (choose = 4) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,"You Are The Chameleon");
+	                                 whisper(e,tile);
+	                                 whisper(f,tile);
+	                				 whisper(g,tile);} else
+	                if (choose = 5) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,tile);
+	                                 whisper(e,"You Are The Chameleon");
+	                                 whisper(f,tile);
+	                				 whisper(g,tile);} else
+	               if (choose = 6) {whisper(a,tile);
+								    whisper(b,tile);
+									whisper(c,tile);
+					                whisper(d,tile);
+	                                whisper(e,tile);
+									whisper(f,"You Are The Chameleon");
+	                				whisper(g,tile);} else
+	               if (choose = 7) {whisper(a,tile);
+								    whisper(b,tile);
+									whisper(c,tile);
+					                whisper(d,tile);
+	                                whisper(e,tile);
+									whisper(f,tile);
+	                				whisper(g,"You Are The Chameleon");}} else
 				   {var choose = Roll(8);
-	                if (choose = 1) {a.send("You Are The Chameleon");
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);
-	                                 h.send(tile);} else
-	                if (choose = 2) {a.send(tile);
-									 b.send("You Are The Chameleon");
-									 c.send(tile);
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);
-	                                 h.send(tile);} else
-				    if (choose = 3) {a.send(tile);
-									 b.send(tile);
-									 c.send("You Are The Chameleon");
-					                 d.send(tile);
-					                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);
-	                                 h.send(tile);} else
-	                if (choose = 4) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send("You Are The Chameleon");
-	                                 e.send(tile);
-	                                 f.send(tile);
-	                				 g.send(tile);
-	                                 h.send(tile);} else
-	                if (choose = 5) {a.send(tile);
-									 b.send(tile);
-									 c.send(tile);
-					                 d.send(tile);
-	                                 e.send("You Are The Chameleon");
-	                                 f.send(tile);
-	                				 g.send(tile);
-	                                 h.send(tile);} else
-	               if (choose = 6) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send("You Are The Chameleon");
-	                				g.send(tile);
-	                                 h.send(tile);} else
-	               if (choose = 7) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send(tile);
-	                				g.send("You Are The Chameleon");
-	                                h.send(tile);} else
-	               if (choose = 8) {a.send(tile);
-								    b.send(tile);
-									c.send(tile);
-					                d.send(tile);
-	                                e.send(tile);
-									f.send(tile);
-	                				g.send(tile);
-	                                h.send("You Are The Chameleon");}}
+	                if (choose = 1) {whisper(a,"You Are The Chameleon");
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,tile);
+					                 whisper(e,tile);
+	                                 whisper(f,tile);
+	                				 whisper(g,tile);
+	                                 whisper(h,tile);} else
+	                if (choose = 2) {whisper(a,tile);
+									 whisper(b,"You Are The Chameleon");
+									 whisper(c,tile);
+					                 whisper(d,tile);
+					                 whisper(e,tile);
+	                                 whisper(f,tile);
+	                				 whisper(g,tile);
+	                                 whisper(h,tile);} else
+				    if (choose = 3) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,"You Are The Chameleon");
+					                 whisper(d,tile);
+					                 whisper(e,tile);
+	                                 whisper(f,tile);
+	                				 whisper(g,tile);
+	                                 whisper(h,tile);} else
+	                if (choose = 4) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,"You Are The Chameleon");
+	                                 whisper(e,tile);
+	                                 whisper(f,tile);
+	                				 whisper(g,tile);
+	                                 whisper(h,tile);} else
+	                if (choose = 5) {whisper(a,tile);
+									 whisper(b,tile);
+									 whisper(c,tile);
+					                 whisper(d,tile);
+	                                 whisper(e,"You Are The Chameleon");
+	                                 whisper(f,tile);
+	                				 whisper(g,tile);
+	                                 whisper(h,tile);} else
+	               if (choose = 6) {whisper(a,tile);
+								    whisper(b,tile);
+									whisper(c,tile);
+					                whisper(d,tile);
+	                                whisper(e,tile);
+									whisper(f,"You Are The Chameleon");
+	                				whisper(g,tile);
+	                                 whisper(h,tile);} else
+	               if (choose = 7) {whisper(a,tile);
+								    whisper(b,tile);
+									whisper(c,tile);
+					                whisper(d,tile);
+	                                whisper(e,tile);
+									whisper(f,tile);
+	                				whisper(g,"You Are The Chameleon");
+	                                whisper(h,tile);} else
+	               if (choose = 8) {whisper(a,tile);
+								    whisper(b,tile);
+									whisper(c,tile);
+					                whisper(d,tile);
+	                                whisper(e,tile);
+									whisper(f,tile);
+	                				whisper(g,tile);
+	                                whisper(h,"You Are The Chameleon");}}
 }
 
 
@@ -247,9 +250,11 @@ client.on('message', msg => {
 
    if (msg.content.startsWith( "Chameleon")) {
    	  /// msg.reply(String(msg));
-   	  ///Cham(String(msg));
-   	  var a = msg.mentions.users.first();
-   msg.reply(a);}
+   	  str = msg.content;
+   	  Cham(str.split(" "));
+   	  //a = str.split(" ")[1];
+   	  //whisper(a,str);
+   }
    	   
    })
 
