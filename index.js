@@ -44,7 +44,7 @@ client.on('message', msg => {
    }
    
    if (msg.content.startsWith("Chameleon")) {
-   	   // syntax: Chameleon <#> <@user1> ... <@user#>
+   	   // syntax: Chameleon <@user1> ... <@user#>
    	   str  = msg.content;
    	   tile = NumToLettBad(4) + Roll(4);
    	   cham = "You are the Chameleon"
