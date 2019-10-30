@@ -11,7 +11,11 @@ if (n === 2) {return 'B'} else
 if (n === 3) {return 'C'} else
 if (n === 4) {return 'D'}}
 
-
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;}}}
 
 
 
@@ -131,6 +135,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   } else
    	   	   if (deal == 2) {
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -143,6 +148,7 @@ client.on('message', msg => {
    	   	       	   "Whisper" + str.split(" ")[4] + tile);
    	   	       client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   } else
    	   	   if (deal == 3) {
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -155,6 +161,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   } else
    	   	  if (deal == 4) {
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -167,6 +174,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + cham);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   } else
    	   	   if (deal == 5) {
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -193,6 +201,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile); 
    	   	   } else
@@ -207,6 +216,7 @@ client.on('message', msg => {
    	   	       	   "Whisper" + str.split(" ")[4] + tile);
    	   	       client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile); 
    	   	   } else
@@ -221,6 +231,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile); 
    	   	   } else
@@ -235,6 +246,8 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + cham);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile); 
    	   	   } else
@@ -263,6 +276,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + cham);
    	   	   }
@@ -279,6 +293,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -295,6 +310,7 @@ client.on('message', msg => {
    	   	       	   "Whisper" + str.split(" ")[4] + tile);
    	   	       client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -311,6 +327,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -327,6 +344,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + cham);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -359,6 +377,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + cham);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -375,6 +394,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -393,6 +413,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -411,6 +432,7 @@ client.on('message', msg => {
    	   	       	   "Whisper" + str.split(" ")[4] + tile);
    	   	       client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -429,6 +451,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -447,6 +470,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + cham);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -483,6 +507,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + cham);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -501,6 +526,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
@@ -519,6 +545,7 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[4] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[5] + tile);
+   	   	   	   sleep(1500);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
