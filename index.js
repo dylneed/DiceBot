@@ -468,7 +468,7 @@ client.on('message', msg => {
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[6] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
-   	   	   	   	   "Whisper" + str.split(" ")[7] + cham);
+   	   	   	   	   "Whisper" + str.split(" ")[7] + tile);
    	   	   	   client.channels.get(`615967798488858624`).send(
    	   	   	   	   "Whisper" + str.split(" ")[8] + tile);
    	   	   } else
