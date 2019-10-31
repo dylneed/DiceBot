@@ -48,9 +48,56 @@ client.on('message', msg => {
    }
    
    if (msg.content.startsWith("Chameleon")) {
+   	   str = msg.content;
+   	   tile = NumToLettBad(Roll(4)) + Roll(4);
+   	   cham = "You are the Chameleon";
+   	   num  = str.split(" ").length - 1;
+   	   deal = Roll(num);
+   	   
+   	   for (i = 1;i <= num ;i++) {
+   	   	   if (i === deal)
+   	   	   	   {client.channels.get(`615967798488858624`).send
+   	   	   	   ("Whisper" + str.split(" ")[deal] + cham);
+   	   	   	   continue;}
+   	   	   client.channels.get(`615967798488858624`).send(
+   	   	   "Whisper" + str.split(" ")[i] + tile);
+   	   	   continue;
+   	   }
+   }
+ 
+})
+
+
+
+
+//615967798488858624
+
+
+
+
+client.login('NjM3ODM3NTExNjgyNDI0ODMz.XbUB8g.fqnRq_qBQYXQi9uRNygr1nx5Jr0');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+/*   
+   if (msg.content.startsWith("Chameleon")) {
    	   // syntax: Chameleon <@user1> ... <@user#>
    	   str  = msg.content;
-   	   tile = NumToLettBad(4) + Roll(4);
+   	   tile = NumToLettBad(Roll(4)) + Roll(4);
    	   cham = "You are the Chameleon"
    	   num  = str.split(" ").length - 1;
    	   deal = Roll(num);
@@ -531,17 +578,4 @@ client.on('message', msg => {
    	   	   	   	   "Whisper" + str.split(" ")[8] + cham);
    	   	   }
    	   }  	   
-   }
-   	
-   
-   })
-
-
-
-
-//615967798488858624
-
-
-
-
-client.login('NjM3ODM3NTExNjgyNDI0ODMz.XbUB8g.fqnRq_qBQYXQi9uRNygr1nx5Jr0');
+   }*/

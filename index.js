@@ -47,7 +47,7 @@ client.on('message', msg => {
    	  msg.delete();
    }
    
-   if (msg.content.startsWith("Chameleon")) {
+   if (msg.content.startsWith("!!CC")) {
    	   str = msg.content;
    	   tile = NumToLettBad(Roll(4)) + Roll(4);
    	   cham = "You are the Chameleon";
