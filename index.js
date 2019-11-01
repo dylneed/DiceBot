@@ -77,6 +77,26 @@ client.on('message', msg => {
    	   	   setTimeout(function(){msg.reply(
    	   	   "There are 5 minutes left on the timer");},((num - 5) * 60 * 1000));
    	   } 
+   	   
+   	   if (num > 10) {
+   	   	   setTimeout(function(){msg.reply(
+   	   	   "There are 5 minutes left on the timer");},((num - 10) * 60 * 1000));
+   	   }
+   	   
+   	   if (num > 15) {
+   	   	   setTimeout(function(){msg.reply(
+   	   	   "There are 5 minutes left on the timer");},((num - 15) * 60 * 1000));
+   	   }
+   	   
+   	   if (num > 30) {
+   	   	   setTimeout(function(){msg.reply(
+   	   	   "There are 5 minutes left on the timer");},((num - 30) * 60 * 1000));
+   	   }
+   	   
+   	   if (num > 60) {
+   	   	   setTimeout(function(){msg.reply(
+   	   	   "There are 5 minutes left on the timer");},((num - 60) * 60 * 1000));
+   	   }
    }
  
 })

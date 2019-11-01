@@ -64,6 +64,20 @@ client.on('message', msg => {
    	   	   continue;
    	   }
    }
+   
+   
+   if (msg.content.startsWith("Timer ")) {
+   	   str = msg.content;
+   	   num = Convert("Timer ",str);
+   	   
+   	   setTimeout(function(){msg.reply(
+   	   "The timer is finished");},(num * 60 * 1000));
+   	   
+   	   if (num > 5) {
+   	   	   setTimeout(function(){msg.reply(
+   	   	   "There are 5 minutes left on the timer");},((num - 5) * 60 * 1000));
+   	   } 
+   }
  
 })
 
