@@ -139,8 +139,9 @@ client.on('message', msg => {
 	}
 	
 	if (msg.content.startsWith("Accusation")) {
+		if (murderer === undefined) {} else{
 		msg.author.send("|| " + murderer +" did it with the " + 
-			weapon + " in the " + room + "||");
+		weapon + " in the " + room + "||");}
 
 	}
    
