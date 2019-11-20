@@ -230,8 +230,11 @@ client.on('message', msg => {
 		"just a satellite used to sharpen the image")}
 		if (n === 8) {msg.channel.send("I don't know " + 
 		msg.author + " does it?")}
+		}
 		
- 		
+	if (msg.content === "Hello there") {
+		msg.channel.send("General Kenobi, you are a bold one!")
+		
 	}
    
    

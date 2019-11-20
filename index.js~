@@ -207,7 +207,7 @@ client.on('message', msg => {
 	
 	
 	if (msg.content.startsWith("Does the moon exist?")) {
-		var n = Roll(7);
+		var n = Roll(9);
 		if (n === 1) {msg.channel.send("No, " + msg.author + 
 				", 'tis a silly question. " + 
 				"Obviously the moon does not exist. It is a hologram.")} else
@@ -218,15 +218,18 @@ client.on('message', msg => {
 		if (n === 4) {msg.channel.send("No, " + msg.author + 
 		", the moon does not exist.")} else
 		if (n === 5) {msg.channel.send("I have no idea " + msg.author + 
-		". You should go with your heart")}
+		". You should go with your heart.")}
 		if (n === 6) {msg.channel.send("No, " + msg.author + 
-		", that would be silly" + "The moon died along with the entirety of the " + 
-		"Solar System besides Earth.The Chinese has a really big photoshopped "+
+		", that would be silly. " + "The moon died along with the entirety of the " + 
+		"Solar System besides Earth. The Chinese have a really big photoshopped "+
 		"canvas that engulfs the sky every night," 
 		+ " since the Chinese killed Space.")} else
-		if (n === 7) {msg.channel.send("No, silly! The lunar lander they sent"
-		+ " to the 'dark side' of the moon is " + 
-		"just a satellite to sharpen the image")} else
+		if (n === 7) {msg.channel.send("No, "+ msg.author + 
+				" you silly goose! The 'lunar lander' they sent"
+		+ " to the 'dark side of the moon' is " + 
+		"just a satellite used to sharpen the image")}
+		if (n === 8) {msg.channel.send("I don't know " + 
+		msg.author + " does it?")}
 		
  		
 	}
