@@ -32,7 +32,7 @@ function Clue(num) {
    	 		if (num ===  8) {return "Candlestick";} else
    	 		if (num ===  9) {return "Revolver";} else
    	 		if (num === 10) {return "Rope";} else
-   	 		if (num === 11) {return "Leap Pipe";} else
+   	 		if (num === 11) {return "Lead Pipe";} else
    	 		if (num === 12) {return "Wrench";} else
   	   	   
    	 		if (num === 13) {return "Hall";} else
@@ -46,6 +46,31 @@ function Clue(num) {
    	 		if (num === 21) {return "Study";}
         
 		else {return "Error";}}
+		
+function Suit(num) {
+	if (num === 1) {return " of Clubs";} else
+	if (num === 2) {return " of Hearts";} else
+	if (num === 3) {return " of Spades";} else
+	if (num === 4) {return " of Diamonds";}
+	else {return "Error"}
+}
+
+function Face(num) {
+	if (num === 1) {return "Ace";} else 
+	if (num === 2) {return "Two"} else
+	if (num === 3) {return "Three"} else
+	if (num === 4) {return "Four"} else
+	if (num === 5) {return "Five"} else
+	if (num === 6) {return "Six"} else
+	if (num === 7) {return "Seven"} else
+	if (num === 8) {return "Eight"} else
+	if (num === 9) {return "Nine"} else
+	if (num === 10) {return "Ten"}
+	if (num === 11) {return "Jack";} else
+	if (num === 12) {return "Queen";} else
+	if (num === 13) {return "King";} 
+	else {return "Error";}
+}
       
 
 
@@ -107,21 +132,14 @@ client.on('message', msg => {
 		murderer = Clue(Roll(6));
 		weapon = Clue(Roll(6) + 6);
 		room = Clue(Roll(9) + 12);
-		
-		
-		
-		//client.channels.get(`615967798488858624`).send 
-		//("||" + murderer + " did it with the " + 
-			//weapon + " in the " + room + "||");
 		   
-		storage = [murderer, weapon, room];
-		
+		var storage = [murderer, weapon, room];
 		
 			for (i = 1; i <= size; i++) {
 				client.channels.get(`615967798488858624`).send 
 				("Whisper" + str.split(" ")[i] + "Here are your cards");
-				//msg.channel.send("Whisper" + str.split(" ")[i] + "Here are your cards")
 			}
+			
 			for (i = 0;i<18;i++) {
 				s = (i%size) + 1;
 				
@@ -134,7 +152,6 @@ client.on('message', msg => {
 				   
 				client.channels.get(`615967798488858624`).send 
 				("Whisper " + str.split(" ")[s] + c);
-				//msg.channel.send("Whisper" + str.split(" ")[s] + c);
 			}
 	}
 	
@@ -143,6 +160,78 @@ client.on('message', msg => {
 		msg.author.send("|| " + murderer +" did it with the " + 
 		weapon + " in the " + room + "||");}
 
+	}
+	/*
+	if (msg.content.startsWith("Deal")) {
+		str = msg.content;
+		size = str.split(" ").length - 2;
+		hand = str.split(" ")[1];
+		storage = [];
+		
+		// card => (Roll)
+		
+		if (msg.content.includes("All")) {
+			
+					}
+			 else {
+			for (i = 1; i <= size; i++) {
+				client.channels.get(`615967798488858624`).send 
+				("Whisper" + str.split(" ")[i + 1] + "Here are your cards");
+				for (v = 1; v <= hand; v++) {
+					c = Face(Roll(13)) + Suit(Roll(4));
+					while (storage.includes(c)) {
+						c = Face(Roll(13)) + Suit(Roll(4));
+					}
+					client.channels.get(`615967798488858624`).send 
+					("Whisper" + str.split(" ")[i + 1] + c);
+				}
+			}
+		}
+	}
+	
+	if (msg.content.startsWith("Draw")) {
+			c = Face(Roll(13)) + Suit(Roll(4));
+					while (storage.includes(c)) {
+						c = Face(Roll(13)) + Suit(Roll(4));
+					}
+	}
+	
+	if (msg.content.startsWith("Reshuffle")) {
+		storage = [];
+	}
+	
+	if (msg.content.startsWith("Random card") || 
+		msg.content.startsWith("Random Card")) {
+		msg.reply(Face(Roll(13)) + Suit(Roll(4)));
+	} */
+	
+	
+	if (msg.content.startsWith("Does the moon exist?")) {
+		var n = Roll(9);
+		if (n === 1) {msg.channel.send("No, " + msg.author + 
+				", 'tis a silly question. " + 
+				"Obviously the moon does not exist. It is a hologram.")} else
+		if (n === 2) {msg.channel.send("No, " + msg.author + 
+		", the moon is a hologram.")} else
+		if (n === 3) {msg.channel.send("Why yes, "+ msg.author +
+		", it does exist.")} else
+		if (n === 4) {msg.channel.send("No, " + msg.author + 
+		", the moon does not exist.")} else
+		if (n === 5) {msg.channel.send("I have no idea " + msg.author + 
+		". You should go with your heart.")}
+		if (n === 6) {msg.channel.send("No, " + msg.author + 
+		", that would be silly. " + "The moon died along with the entirety of the " + 
+		"Solar System besides Earth. The Chinese have a really big photoshopped "+
+		"canvas that engulfs the sky every night," 
+		+ " since the Chinese killed Space.")} else
+		if (n === 7) {msg.channel.send("No, "+ msg.author + 
+				" you silly goose! The 'lunar lander' they sent"
+		+ " to the 'dark side of the moon' is " + 
+		"just a satellite used to sharpen the image")}
+		if (n === 8) {msg.channel.send("I don't know " + 
+		msg.author + " does it?")}
+		
+ 		
 	}
    
    
@@ -155,27 +244,32 @@ client.on('message', msg => {
    	   
    	   if (num > 5) {
    	   	   setTimeout(function(){msg.reply(
-   	   	   "There are 5 minutes left on the timer");},((num - 5) * 60 * 1000));
+   	   	   "There are 5 minutes left on the timer");},
+   	   	   	   ((num - 5) * 60 * 1000));
    	   } 
    	   
    	   if (num > 10) {
    	   	   setTimeout(function(){msg.reply(
-   	   	   "There are 10 minutes left on the timer");},((num - 10) * 60 * 1000));
+   	   	   "There are 10 minutes left on the timer");},
+   	   	   	   ((num - 10) * 60 * 1000));
    	   }
    	   
    	   if (num > 15) {
    	   	   setTimeout(function(){msg.reply(
-   	   	   "There are 15 minutes left on the timer");},((num - 15) * 60 * 1000));
+   	   	   "There are 15 minutes left on the timer");},
+   	   	   	   ((num - 15) * 60 * 1000));
    	   }
    	   
    	   if (num > 30) {
    	   	   setTimeout(function(){msg.reply(
-   	   	   "There are 30 minutes left on the timer");},((num - 30) * 60 * 1000));
+   	   	   "There are 30 minutes left on the timer");},
+   	   	   	   ((num - 30) * 60 * 1000));
    	   }
    	   
    	   if (num > 60) {
    	   	   setTimeout(function(){msg.reply(
-   	   	   "There are 60 minutes left on the timer");},((num - 60) * 60 * 1000));
+   	   	   "There are 60 minutes left on the timer");},
+   	   	   	   ((num - 60) * 60 * 1000));
    	   }
    }
  
