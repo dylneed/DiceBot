@@ -17,7 +17,7 @@ function sleep(milliseconds) {
     if ((new Date().getTime() - start) > milliseconds){
       break;}}}
       
-function RDate() {
+/*function RDate() {
 	var protogreg = Roll(8) - 1;
 	var greg = protogreg != 0;
 	var currdate = new Date();
@@ -45,7 +45,7 @@ function RDate() {
 	{day = Roll(30);}
 	
 	return month + "/" + day + "/" + year;
-}
+}*/
 
 
 function Clue(num) {
@@ -276,9 +276,9 @@ client.on('message', msg => {
    }
    
    
-   if (msg.content.startsWith("Random Date")) {
+/*   if (msg.content.startsWith("Random Date")) {
    	   var out = rDate();
-   	   msg.channel.send(out);
+   	   msg.channel.send(out);*/
    }
  
 })
