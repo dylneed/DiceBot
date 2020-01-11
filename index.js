@@ -77,9 +77,9 @@ function DOTW(m,q,y) {
     
 	if (!greg) {J = (701 - Math.floor(y/100)) % 7;} else
 	if (Math.floor(y/100) % 4 == 0) {J = 3;} else
-	if (Math.floor(y/100) % 4 == 1) {J = 4;} else
+	if (Math.floor(y/100) % 4 == 1) {J = 1;} else
 	if (Math.floor(y/100) % 4 == 2) {J = 6;} else
-	if (Math.floor(y/100) % 4 == 3) {J = 1;}
+	if (Math.floor(y/100) % 4 == 3) {J = 4;}
 	
 	var h = (J + (K % 4) - (2 * Math.floor(K/4)) + q - d + 700) % 7;
 	
