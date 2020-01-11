@@ -81,7 +81,7 @@ function DOTW(m,q,y) {
 	if (Math.floor(y/100) % 4 == 2) {J = 6;} else
 	if (Math.floor(y/100) % 4 == 3) {J = 1;}
 	
-	var h = (J - (2 * Math.floor(K/4)) + q - d + 700) % 7;
+	var h = (J (K % 4) - (2 * Math.floor(K/4)) + q - d + 700) % 7;
 	
 		
 	if (h == 0) {return "Saturday";} else
