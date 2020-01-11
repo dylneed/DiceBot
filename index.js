@@ -17,21 +17,21 @@ function sleep(milliseconds) {
     if ((new Date().getTime() - start) > milliseconds){
       break;}}}
       
-/*function RDate() {
+function RDate() {
 	var protogreg = Roll(8) - 1;
 	var greg = protogreg != 0;
 	var currdate = new Date();
 	
-	var year = 0
-	var month = 0
-	var day = 0
-	var feb = 28
-	var g = 0
+	var year = 0;
+	var month = 0;
+	var day = 0;
+	var feb = 28;
+	var g = 0;
 	
 	if (greg) {year = (1582 + Roll(currdate.getFullYear() - 1582));} 
 	else {year = (100 + Roll(1482) - 1);}
 	
-	if (greg) {g = 1} else {g = 0}
+	if (greg) {g = 1;} else {g = 0;}
 	
 	if (year % 4 == 0) {feb = 29;}
 	if (year % 100 == 0) {feb = 29 - g;}
@@ -45,7 +45,54 @@ function sleep(milliseconds) {
 	{day = Roll(30);}
 	
 	return month + "/" + day + "/" + year;
-}*/
+}
+
+function DOTW(m,q,y) {
+	var greg = true;
+	var d = false;
+    var l = 0;
+    var g = 1;
+	
+	if (((10000*y)+(100*m)+q) < 15821016) {greg = false;}
+	
+    
+    var J = Math.floor(y/100);
+    
+	var K = (y % 100) % 28;
+	
+	if (greg) {g = 1;} else {g = 0;}    
+	if (y % 4 == 0) {l = 1;}
+	if (y % 100 == 0) {l = 1 - g;}
+	if (y % 400 == 0) {l = 1;}    
+	
+	if (m == 1) {d = 3 + l;} else
+	if (m == 2) {d = 28 + l % 7;} else
+	if (m == 3) {d = 0;} else
+	if (m == 5) {d = 9 % 7;} else
+	if (m == 7) {d = 11 % 7;} else
+	if (m == 9) {d = 5;} else
+	if (m == 11) {d = 7 % 7;} else
+	if (m % 2 == 0) {d = m % 7;}
+	
+    
+	if (!greg) {J = (701 - Math.floor(y/100)) % 7;} else
+	if (Math.floor(y/100) % 4 == 0) {J = 3;} else
+	if (Math.floor(y/100) % 4 == 1) {J = 4;} else
+	if (Math.floor(y/100) % 4 == 2) {J = 6;} else
+	if (Math.floor(y/100) % 4 == 3) {J = 1;}
+	
+	var h = (J - (2 * Math.floor(K/4)) + q - d + 700) % 7;
+	
+		
+	if (h == 0) {return "Saturday";} else
+	if (h == 1) {return "Sunday";} else
+	if (h == 2) {return "Monday";} else
+	if (h == 3) {return "Tuesday";} else
+	if (h == 4) {return "Wednesday";} else
+	if (h == 5) {return "Thursday";} else
+	if (h == 6) {return "Friday";}
+	
+}
 
 
 function Clue(num) {
@@ -276,9 +323,20 @@ client.on('message', msg => {
    }
    
    
-/*   if (msg.content.startsWith("Random Date")) {
-   	   var out = rDate();
-   	   msg.channel.send(out);*/
+   if (msg.content.startsWith("Random Date")) {
+   	   var out = RDate();
+   	   msg.reply(out);
+   }
+   
+   
+   if (msg.content.startsWith("DOTW ")) {
+   	   var str = msg.content;
+   	   var date = str.split("DOTW ")[1];
+   	   var m = parseInt(date.split("/")[0]);
+   	   var d = parseInt(date.split("/")[1]);
+   	   var y = parseInt(date.split("/")[2]);
+   	   var out = DOTW(m,d,y);
+   	   msg.channel.send(date + " is a " + out);
    }
  
 })
