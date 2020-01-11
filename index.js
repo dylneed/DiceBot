@@ -31,7 +31,7 @@ function RDate() {
 	if (greg) {year = (1582 + Roll(currdate.getFullYear() - 1582));} 
 	else {year = (100 + Roll(1482) - 1);}
 	
-	if (protogreg < 5) {year = (1900 + (Roll(currdate.getFullYear()-1900)));}
+	if (protogreg > 5) {year = (1900 + (Roll(currdate.getFullYear()-1900)));}
 	
 	if (greg) {g = 1;} else {g = 0;}
 	
