@@ -51,7 +51,7 @@ function Suit(num) {
 	if (num === 1) {return " of Clubs";} else
 	if (num === 2) {return " of Hearts";} else
 	if (num === 3) {return " of Spades";} else
-	if (num === 4) {return " of Diamonds";}
+	if (num === 0) {return " of Diamonds";}
 	else {return "Error"}
 }
 
@@ -68,8 +68,17 @@ function Face(num) {
 	if (num === 10) {return "Ten"}
 	if (num === 11) {return "Jack";} else
 	if (num === 12) {return "Queen";} else
-	if (num === 13) {return "King";} 
+	if (num === 0) {return "King";} 
 	else {return "Error";}
+}
+
+
+function Card(num) {
+	var n = num % 52;
+	var s = Math.floor(n/13);
+	var f = n % 13;
+	var out = Face(f) + Suit(s);
+	return out;
 }
       
 
@@ -230,8 +239,11 @@ client.on('message', msg => {
 		"just a satellite used to sharpen the image")}
 		if (n === 8) {msg.channel.send("I don't know " + 
 		msg.author + " does it?")}
+		}
 		
- 		
+	if (msg.content === "Hello there") {
+		msg.channel.send("General Kenobi, you are a bold one!")
+		
 	}
    
    

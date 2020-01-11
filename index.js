@@ -17,6 +17,35 @@ function sleep(milliseconds) {
     if ((new Date().getTime() - start) > milliseconds){
       break;}}}
       
+function RDate() {
+	var protogreg = Roll(8) - 1;
+	var greg = protogreg != 0;
+	var currdate = new Date();
+	
+	var year = 0
+	var month = 0
+	var day = 0
+	var feb = 28
+	var g = 0
+	
+	if (greg) {year = (1582 + Roll(currdate.getFullYear() - 1582));} 
+	else {year = (100 + Roll(1482) - 1);}
+	
+	if (greg) {g = 1} else {g = 0}
+	
+	if (year % 4 == 0) {feb = 29;}
+	if (year % 100 == 0) {feb = 29 - g;}
+	if (year % 400 == 0) {feb = 29;}
+	
+	month = Roll(12);
+	
+	if (month == 2) {day = Roll(28);} else
+	if (month == 1 || month == 3 || month == 5 || month == 7 || 
+		month == 8 || month == 10 || month == 12) { day = Roll(31);} else
+	{day = Roll(30);}
+	
+	return month + "/" + day + "/" + year;
+}
 
 
 function Clue(num) {
@@ -51,7 +80,7 @@ function Suit(num) {
 	if (num === 1) {return " of Clubs";} else
 	if (num === 2) {return " of Hearts";} else
 	if (num === 3) {return " of Spades";} else
-	if (num === 4) {return " of Diamonds";}
+	if (num === 0) {return " of Diamonds";}
 	else {return "Error"}
 }
 
@@ -68,8 +97,17 @@ function Face(num) {
 	if (num === 10) {return "Ten"}
 	if (num === 11) {return "Jack";} else
 	if (num === 12) {return "Queen";} else
-	if (num === 13) {return "King";} 
+	if (num === 0) {return "King";} 
 	else {return "Error";}
+}
+
+
+function Card(num) {
+	var n = num % 52;
+	var s = Math.floor(n/13);
+	var f = n % 13;
+	var out = Face(f) + Suit(s);
+	return out;
 }
       
 
@@ -156,54 +194,14 @@ client.on('message', msg => {
 	}
 	
 	if (msg.content.startsWith("Accusation")) {
-		if (murderer === undefined) {} else{
+		if (murderer === undefined) {} else {
 		msg.author.send("|| " + murderer +" did it with the " + 
 		weapon + " in the " + room + "||");}
 
 	}
-	/*
-	if (msg.content.startsWith("Deal")) {
-		str = msg.content;
-		size = str.split(" ").length - 2;
-		hand = str.split(" ")[1];
-		storage = [];
-		
-		// card => (Roll)
-		
-		if (msg.content.includes("All")) {
-			
-					}
-			 else {
-			for (i = 1; i <= size; i++) {
-				client.channels.get(`615967798488858624`).send 
-				("Whisper" + str.split(" ")[i + 1] + "Here are your cards");
-				for (v = 1; v <= hand; v++) {
-					c = Face(Roll(13)) + Suit(Roll(4));
-					while (storage.includes(c)) {
-						c = Face(Roll(13)) + Suit(Roll(4));
-					}
-					client.channels.get(`615967798488858624`).send 
-					("Whisper" + str.split(" ")[i + 1] + c);
-				}
-			}
-		}
+	if (msg.content.startsWith("Random Card")) {
+		Card(Roll(52));
 	}
-	
-	if (msg.content.startsWith("Draw")) {
-			c = Face(Roll(13)) + Suit(Roll(4));
-					while (storage.includes(c)) {
-						c = Face(Roll(13)) + Suit(Roll(4));
-					}
-	}
-	
-	if (msg.content.startsWith("Reshuffle")) {
-		storage = [];
-	}
-	
-	if (msg.content.startsWith("Random card") || 
-		msg.content.startsWith("Random Card")) {
-		msg.reply(Face(Roll(13)) + Suit(Roll(4)));
-	} */
 	
 	
 	if (msg.content.startsWith("Does the moon exist?")) {
@@ -220,9 +218,10 @@ client.on('message', msg => {
 		if (n === 5) {msg.channel.send("I have no idea " + msg.author + 
 		". You should go with your heart.")}
 		if (n === 6) {msg.channel.send("No, " + msg.author + 
-		", that would be silly. " + "The moon died along with the entirety of the " + 
-		"Solar System besides Earth. The Chinese have a really big photoshopped "+
-		"canvas that engulfs the sky every night," 
+		", that would be silly. " + 
+		"The moon died along with the entirety of the " + 
+		"Solar System besides Earth. The Chinese have a really big photoshopped"
+		+ " canvas that engulfs the sky every night," 
 		+ " since the Chinese killed Space.")} else
 		if (n === 7) {msg.channel.send("No, "+ msg.author + 
 				" you silly goose! The 'lunar lander' they sent"
@@ -274,6 +273,12 @@ client.on('message', msg => {
    	   	   "There are 60 minutes left on the timer");},
    	   	   	   ((num - 60) * 60 * 1000));
    	   }
+   }
+   
+   
+   if (msg.content.startsWith("Random Date")) {
+   	   var out = rDate();
+   	   msg.channel.send(out);
    }
  
 })
