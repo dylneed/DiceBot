@@ -81,7 +81,7 @@ function DOTW(m,q,y) {
 	if (Math.floor(y/100) % 4 == 2) {J = 6;} else
 	if (Math.floor(y/100) % 4 == 3) {J = 1;}
 	
-	var h = (J (K % 4) - (2 * Math.floor(K/4)) + q - d + 700) % 7;
+	var h = (J + (K % 4) - (2 * Math.floor(K/4)) + q - d + 700) % 7;
 	
 		
 	if (h == 0) {return "Saturday";} else
@@ -184,10 +184,13 @@ client.on('message', msg => {
 
    if (msg.content.startsWith("Whisper",0)) {
    	  user = msg.mentions.members.first();
+   	  
+   	  if (user == undefined) {msg.delete;} else {
+   	  
    	  str = msg.content;
    	  out = str.split(">")[1];
    	  user.send(" " + out);
-   	  msg.delete();
+   	  msg.delete();}
    }
    
    if (msg.content.startsWith("Chameleon")) {
@@ -247,7 +250,8 @@ client.on('message', msg => {
 
 	}
 	if (msg.content.startsWith("Random Card")) {
-		Card(Roll(52));
+		var out = Card(Roll(52));
+		msg.reply(out);
 	}
 	
 	
