@@ -60,12 +60,20 @@ function DOTW(m,q,y) {
     
     var J = Math.floor(y/100);
     
-	var K = (y % 100) % 28;
+	var K = (y % 100);
 	
 	if (greg) {g = 1;} else {g = 0;}    
 	if (y % 4 == 0) {l = 1;}
 	if (y % 100 == 0) {l = 1 - g;}
-	if (y % 400 == 0) {l = 1;}    
+	if (y % 400 == 0) {l = 1;}
+	
+	
+	if (!greg) {J = (701 - J) % 7;} else
+	if (J % 4 == 0) {J = 3;} else
+	if (J % 4 == 1) {J = 1;} else
+	if (J % 4 == 2) {J = 6;} else
+	if (J % 4 == 3) {J = 4;}
+	
 	
 	if (m == 1) {d = 3 + l;} else
 	if (m == 2) {d = 28 + l % 7;} else
@@ -76,12 +84,6 @@ function DOTW(m,q,y) {
 	if (m == 11) {d = 7 % 7;} else
 	if (m % 2 == 0) {d = m % 7;}
 	
-    
-	if (!greg) {J = (701 - Math.floor(y/100)) % 7;} else
-	if (Math.floor(y/100) % 4 == 0) {J = 3;} else
-	if (Math.floor(y/100) % 4 == 1) {J = 1;} else
-	if (Math.floor(y/100) % 4 == 2) {J = 6;} else
-	if (Math.floor(y/100) % 4 == 3) {J = 4;}
 	
 	var h = (J + (K % 4) - (2 * Math.floor(K/4)) + q - d + 700) % 7;
 	
@@ -193,6 +195,10 @@ client.on('message', msg => {
    	  out = str.split(">")[1];
    	  user.send(" " + out);
    	  msg.delete();}
+   }
+   
+   if (msg.content === "testTEST") {
+   	   msg.reply("Working");
    }
    
    if (msg.content.startsWith("Chameleon")) {

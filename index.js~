@@ -17,6 +17,86 @@ function sleep(milliseconds) {
     if ((new Date().getTime() - start) > milliseconds){
       break;}}}
       
+function RDate() {
+	var protogreg = Roll(8) - 1;
+	var greg = protogreg != 0;
+	var currdate = new Date();
+	
+	var year = 0;
+	var month = 0;
+	var day = 0;
+	var feb = 28;
+	var g = 0;
+	
+	if (greg) {year = (1582 + Roll(currdate.getFullYear() - 1582));} 
+	else {year = (100 + Roll(1482) - 1);}
+	
+	if (protogreg > 5) {year = (1900 + (Roll(currdate.getFullYear()-1900)));}
+	
+	if (greg) {g = 1;} else {g = 0;}
+	
+	if (year % 4 == 0) {feb = 29;}
+	if (year % 100 == 0) {feb = 29 - g;}
+	if (year % 400 == 0) {feb = 29;}
+	
+	month = Roll(12);
+	
+	if (month == 2) {day = Roll(28);} else
+	if (month == 1 || month == 3 || month == 5 || month == 7 || 
+		month == 8 || month == 10 || month == 12) { day = Roll(31);} else
+	{day = Roll(30);}
+	
+	return month + "/" + day + "/" + year;
+}
+
+function DOTW(m,q,y) {
+	var greg = true;
+	var d = false;
+    var l = 0;
+    var g = 1;
+	
+	if (((10000*y)+(100*m)+q) < 15821016) {greg = false;}
+	
+    
+    var J = Math.floor(y/100);
+    
+	var K = (y % 100);
+	
+	if (greg) {g = 1;} else {g = 0;}    
+	if (y % 4 == 0) {l = 1;}
+	if (y % 100 == 0) {l = 1 - g;}
+	if (y % 400 == 0) {l = 1;}
+	
+	
+	if (!greg) {J = (701 - J) % 7;} else
+	if (J % 4 == 0) {J = 3;} else
+	if (J % 4 == 1) {J = 1;} else
+	if (J % 4 == 2) {J = 6;} else
+	if (J % 4 == 3) {J = 4;}
+	
+	
+	if (m == 1) {d = 3 + l;} else
+	if (m == 2) {d = 28 + l % 7;} else
+	if (m == 3) {d = 0;} else
+	if (m == 5) {d = 9 % 7;} else
+	if (m == 7) {d = 11 % 7;} else
+	if (m == 9) {d = 5;} else
+	if (m == 11) {d = 7 % 7;} else
+	if (m % 2 == 0) {d = m % 7;}
+	
+	
+	var h = (J + (K % 4) - (2 * Math.floor(K/4)) + q - d + 700) % 7;
+	
+		
+	if (h == 0) {return "Saturday";} else
+	if (h == 1) {return "Sunday";} else
+	if (h == 2) {return "Monday";} else
+	if (h == 3) {return "Tuesday";} else
+	if (h == 4) {return "Wednesday";} else
+	if (h == 5) {return "Thursday";} else
+	if (h == 6) {return "Friday";}
+	
+}
 
 
 function Clue(num) {
@@ -108,10 +188,17 @@ client.on('message', msg => {
 
    if (msg.content.startsWith("Whisper",0)) {
    	  user = msg.mentions.members.first();
+   	  
+   	  if (user == undefined) {msg.delete;} else {
+   	  
    	  str = msg.content;
    	  out = str.split(">")[1];
    	  user.send(" " + out);
-   	  msg.delete();
+   	  msg.delete();}
+   }
+   
+   if (msg === "testTEST") {
+   	   msg.reply("Working");
    }
    
    if (msg.content.startsWith("Chameleon")) {
@@ -165,54 +252,15 @@ client.on('message', msg => {
 	}
 	
 	if (msg.content.startsWith("Accusation")) {
-		if (murderer === undefined) {} else{
+		if (murderer === undefined) {} else {
 		msg.author.send("|| " + murderer +" did it with the " + 
 		weapon + " in the " + room + "||");}
 
 	}
-	/*
-	if (msg.content.startsWith("Deal")) {
-		str = msg.content;
-		size = str.split(" ").length - 2;
-		hand = str.split(" ")[1];
-		storage = [];
-		
-		// card => (Roll)
-		
-		if (msg.content.includes("All")) {
-			
-					}
-			 else {
-			for (i = 1; i <= size; i++) {
-				client.channels.get(`615967798488858624`).send 
-				("Whisper" + str.split(" ")[i + 1] + "Here are your cards");
-				for (v = 1; v <= hand; v++) {
-					c = Face(Roll(13)) + Suit(Roll(4));
-					while (storage.includes(c)) {
-						c = Face(Roll(13)) + Suit(Roll(4));
-					}
-					client.channels.get(`615967798488858624`).send 
-					("Whisper" + str.split(" ")[i + 1] + c);
-				}
-			}
-		}
+	if (msg.content.startsWith("Random Card")) {
+		var out = Card(Roll(52));
+		msg.reply(out);
 	}
-	
-	if (msg.content.startsWith("Draw")) {
-			c = Face(Roll(13)) + Suit(Roll(4));
-					while (storage.includes(c)) {
-						c = Face(Roll(13)) + Suit(Roll(4));
-					}
-	}
-	
-	if (msg.content.startsWith("Reshuffle")) {
-		storage = [];
-	}
-	
-	if (msg.content.startsWith("Random card") || 
-		msg.content.startsWith("Random Card")) {
-		msg.reply(Face(Roll(13)) + Suit(Roll(4)));
-	} */
 	
 	
 	if (msg.content.startsWith("Does the moon exist?")) {
@@ -229,9 +277,10 @@ client.on('message', msg => {
 		if (n === 5) {msg.channel.send("I have no idea " + msg.author + 
 		". You should go with your heart.")}
 		if (n === 6) {msg.channel.send("No, " + msg.author + 
-		", that would be silly. " + "The moon died along with the entirety of the " + 
-		"Solar System besides Earth. The Chinese have a really big photoshopped "+
-		"canvas that engulfs the sky every night," 
+		", that would be silly. " + 
+		"The moon died along with the entirety of the " + 
+		"Solar System besides Earth. The Chinese have a really big photoshopped"
+		+ " canvas that engulfs the sky every night," 
 		+ " since the Chinese killed Space.")} else
 		if (n === 7) {msg.channel.send("No, "+ msg.author + 
 				" you silly goose! The 'lunar lander' they sent"
@@ -283,6 +332,23 @@ client.on('message', msg => {
    	   	   "There are 60 minutes left on the timer");},
    	   	   	   ((num - 60) * 60 * 1000));
    	   }
+   }
+   
+   
+   if (msg.content.startsWith("Random Date")) {
+   	   var out = RDate();
+   	   msg.reply(out);
+   }
+   
+   
+   if (msg.content.startsWith("DOTW ")) {
+   	   var str = msg.content;
+   	   var date = str.split("DOTW ")[1];
+   	   var m = parseInt(date.split("/")[0]);
+   	   var d = parseInt(date.split("/")[1]);
+   	   var y = parseInt(date.split("/")[2]);
+   	   var out = DOTW(m,d,y);
+   	   msg.channel.send(date + " is a " + out);
    }
  
 })
