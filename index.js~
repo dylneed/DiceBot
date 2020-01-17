@@ -160,6 +160,22 @@ function Card(num) {
 	var out = Face(f) + Suit(s);
 	return out;
 }
+
+function Shuffle(a) {
+    var s = new Array();
+    for (i=0;i<a.length;i++) {
+    	var R = Random(a.length) + 1;
+        while (s.includes(R)) {
+        	R = Random(a.length) + 1;
+        }
+        s[i] = R;
+    }
+    var out = new Array();
+    for (i=0;i<a.length;i++) {
+    	out[i] = a[s[i]]
+    }
+    return out
+}
       
 
 
@@ -197,7 +213,7 @@ client.on('message', msg => {
    	  msg.delete();}
    }
    
-   if (msg === "testTEST") {
+   if (msg.content === "testTEST") {
    	   msg.reply("Working");
    }
    
