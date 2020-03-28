@@ -7,15 +7,12 @@ var OrderedDeck = new Array ("AC","2C","3C","4C","5C","6C","7C","8C","9C",
 	"10S","JS","QS","KS","AD","2D","3D","4D","5D","6D","7D","8D","9D",
 	"10D","JD","QD","KD");
 
+var letters = new Array ("A","B","C","D","E","F","G","H","I","J","K","L",
+	"M","N","O","P","W","X","Y","Z")
+
 function Convert(spliter, string) {
 	return parseInt(string.split(spliter)[1])
 }
-
-function NumToLettBad(n) {
-if (n === 1) {return 'A'} else
-if (n === 2) {return 'B'} else
-if (n === 3) {return 'C'} else
-if (n === 4) {return 'D'}}
 
 function sleep(milliseconds) {
   var start = new Date().getTime();
@@ -201,20 +198,18 @@ client.on('message', msg => {
 		
 	testchannel = client.channels.get(`615967798488858624`)
 		
-    if (msg.content.includes('Hello Die', 0))      
+    if (msg.content.toUpperCase().includes('HELLO DIE', 0))      
         {msg.reply('Hello');}
         
         
-    if (msg.content.startsWith('Roll ', 0)) 
-    	{msg.reply(Roll(Convert('Roll ',msg.content)));}
-    if (msg.content.includes('roll', 0))
-    	{msg.reply(Roll(Convert('roll ',msg.content)));}
+    if (msg.content.toUpperCase().startsWith('ROLL ', 0)) 
+    	{msg.reply(Roll(Convert('ROLL ',msg.content)));}
     	
     	
-    if (msg.content.includes("up up down down left right left right b a" , 0)) 
+    if (msg.content.toUpperCase().includes("UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A" , 0)) 
         {msg.reply('Fuck you ')}
 
-   if (msg.content.startsWith("Whisper",0)) {
+   if (msg.content.toUpperCase().startsWith("WHISPER",0)) {
    	  user = msg.mentions.members.first();
    	  
    	  if (user == undefined) {msg.delete;} else {
@@ -225,13 +220,13 @@ client.on('message', msg => {
    	  msg.delete();}
    }
    
-   if (msg.content === "testTEST") {
-   	   msg.reply("Working");
+   if (msg.content === "P I N G") {
+   	   msg.reply("P O N G");
    }
    
-   if (msg.content.startsWith("Chameleon")) {
+   if (msg.content.toUpperCase().startsWith("CHAMELEON")) {
    	   str = msg.content;
-   	   tile = NumToLettBad(Roll(4)) + Roll(4);
+   	   tile = Letters[Roll(4)-1] + Roll(4);
    	   cham = "You are the Chameleon";
    	   num  = str.split(" ").length - 1;
    	   deal = Roll(num);
@@ -279,19 +274,19 @@ client.on('message', msg => {
 			}
 	}
 	
-	if (msg.content.startsWith("Accusation")) {
+	if (msg.content.toUpperCase().startsWith("ACCUSATION")) {
 		if (murderer === undefined) {} else {
 		msg.author.send("|| " + murderer +" did it with the " + 
 		weapon + " in the " + room + "||");}
 
 	}
-	if (msg.content.startsWith("Random Card")) {
-		var out = Card(Roll(52));
+	if (msg.content.toUpperCase().startsWith("RANDOM CARD")) {
+		var out = Face(Roll(13)-1) + Suit(Roll(4) - 1);
 		msg.reply(out);
 	}
 	
 	
-	if (msg.content.startsWith("Does the moon exist?")) {
+	if (msg.content.toUpperCase().startsWith("DOES THE MOON EXIST?")) {
 		var n = Roll(9);
 		if (n === 1) {msg.channel.send("No, " + msg.author + 
 				", 'tis a silly question. " + 
@@ -318,13 +313,13 @@ client.on('message', msg => {
 		msg.author + " does it?")}
 		}
 		
-	if (msg.content === "Hello there") {
+	if (msg.content.toUpperCase() === "HELLO THERE") {
 		msg.channel.send("General Kenobi, you are a bold one!")
 		
 	}
    
    
-   if (msg.content.startsWith("Timer ")) {
+   if (msg.content.toUpperCase().startsWith("TIMER ")) {
    	   str = msg.content;
    	   num = Convert("Timer ",str);
    	   
@@ -363,14 +358,14 @@ client.on('message', msg => {
    }
    
    
-   if (msg.content.startsWith("Random Date")) {
+   if (msg.content.toUpperCase().startsWith("RANDOM DATE")) {
    	   var out = RDate();
    	   msg.reply(out);
    }
    
    
-   if (msg.content.startsWith("DOTW ")) {
-   	   var str = msg.content;
+   if (msg.content.toUpperCase().startsWith("DOTW ")) {
+   	   var str = msg.content.toUpperCase();
    	   var date = str.split("DOTW ")[1];
    	   var m = parseInt(date.split("/")[0]);
    	   var d = parseInt(date.split("/")[1]);
@@ -378,6 +373,12 @@ client.on('message', msg => {
    	   var out = DOTW(m,d,y);
    	   msg.channel.send(date + " is a " + out);
    }
+   
+   if (msg.content.toUpperCase() === "BITCH") {
+   	   msg.channel.send("That's Lt. Cmdr. Bitch to you, " + msg.author);
+   }
+   
+   
  
 })
 
