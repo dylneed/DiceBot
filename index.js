@@ -11,7 +11,7 @@ var letters = new Array ("A","B","C","D","E","F","G","H","I","J","K","L",
 	"M","N","O","P","W","X","Y","Z")
 
 function Convert(spliter, string) {
-	return parseInt(string.split(spliter)[1])
+	return parseInt(string.split(spliter)[1]);
 }
 
 function sleep(milliseconds) {
@@ -203,7 +203,7 @@ client.on('message', msg => {
         
         
     if (msg.content.toUpperCase().startsWith('ROLL ', 0)) 
-    	{msg.reply(Roll(Convert('ROLL ',msg.content)));}
+    	{msg.reply(Roll(Convert('ROLL ', msg.content.toUpperCase())));}
     	
     	
     if (msg.content.toUpperCase().includes("UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A" , 0)) 
@@ -378,7 +378,9 @@ client.on('message', msg => {
    	   msg.channel.send("That's Lt. Cmdr. Bitch to you, " + msg.author);
    }
    
-   
+   if (msg.content.toUpperCase().startsWith("Liar's Poker ")) {
+   	   
+   }
  
 })
 
