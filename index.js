@@ -501,7 +501,7 @@ client.on('message', msg => {
    	   
    }
    
-   if(msg.content.toUpperCase().startWith("DEAL "))
+   /*if(msg.content.toUpperCase().startWith("DEAL "))
    {
    	   client.channels.get(`615967798488858624`).send
    	   	("Whisper" + msg.content.split(" ")[1] + Card(Deque(ShuffledDeck)));
@@ -524,7 +524,7 @@ client.on('message', msg => {
    	   	   	   ("Whisper" + arr[(i % (arr.length - 1)) + 1] + 
    	   	   	   	   Card(Deque(ShuffledDeck)));
    	   }
-   }
+   }*/
  
 })
 
