@@ -347,7 +347,9 @@ client.on('message', msg => {
 	}
 	if (msg.content.toUpperCase().startsWith("RANDOM CARD")) 
 	{
-		
+		Shuffle(ShuffledDeck);
+		client.channels.get(`615967798488858624`).send 
+			("Whisper" + str.split(" ")[i] + Card(Deque(ShuffledDeck)));
 	}
 	
 	
@@ -497,6 +499,31 @@ client.on('message', msg => {
    	   	   }
    	   }
    	   
+   }
+   
+   if(msg.content.toUpperCase().startWith("DEAL "))
+   {
+   	   client.channels.get(`615967798488858624`).send
+   	   	("Whisper" + msg.content.split(" ")[1] + Card(Deque(ShuffledDeck)));
+   }
+   
+   if (msg.content.toUpperCase().startsWith("HEARTS "))
+   {
+   	   Shuffle(ShuffledDeck);
+   	   var arr = msg.content.split(" ");
+   	   
+   	   for(var i = 1; i < arr.length; i++)
+   	   {
+   	   	   client.channels.get(`615967798488858624`).send
+   	   	   	   ("Whisper" + arr[i] + "Here you go!");
+   	   }
+   	   
+   	   for (var i = 0; i < 52; i++)
+   	   {
+   	   	   client.channels.get(`615967798488858624`).send
+   	   	   	   ("Whisper" + arr[(i % (arr.length - 1)) + 1] + 
+   	   	   	   	   Card(Deque(ShuffledDeck)));
+   	   }
    }
  
 })
