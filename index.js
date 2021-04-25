@@ -445,7 +445,11 @@ client.on('message', msg => {
    	   msg.channel.send("That's Lt. Cmdr. Bitch to you, " + msg.author);
    }
    
-   if (msg.content.toUpperCase().startsWith("LIAR'S POKER")) 
+
+   
+   if ((msg.content.toUpperCase().startsWith("LIAR'S POKER")||
+   	   (msg.content.toUpperCase().startsWith("LIARS POKER")))&&
+   	   !(msg.content.toUpperCase().includes("FLIP"))) 
    {
    	   Shuffle(ShuffledDeck);
    	   var Deal = msg.content.split(" ");
@@ -469,7 +473,7 @@ client.on('message', msg => {
    	   	   }
    	   	   catch (e)
    	   	   {
-   	   	   	   
+   	   	   	   msg.reply("AAAAA")
    	   	   }
    	   }
    	   
@@ -490,8 +494,13 @@ client.on('message', msg => {
    	   {
    	   	   try
    	   	   {
+   	   	   	   c = Deque(ShuffledDeck);
+   	   	   	   
    	   	   	   client.channels.get(`615967798488858624`).send
-   	   	   	   ("Whisper" + Deal[i] + Card(Deque(ShuffledDeck)));
+   	   	   	   ("Whisper" + Deal[i] + Card(c));
+   	   	   	   
+   	   	   	   var LPstr;
+   	   	   	   LPstr += Card(c) + ", ";
    	   	   }
    	   	   catch(e)
    	   	   {
@@ -499,6 +508,12 @@ client.on('message', msg => {
    	   	   }
    	   }
    	   
+   }
+   
+   if (msg.content.toUpperCase().startsWith("LIAR'S POKER FLIP")||
+   	   msg.content.toUpperCase().startsWith("LIARS POKER FLIP")) 
+   {
+   	    msg.reply(LPstr);
    }
    
    if(msg.content.toUpperCase().startsWith("DEAL "))
@@ -529,7 +544,7 @@ client.on('message', msg => {
    if(msg.content.toUpperCase().startsWith("RESHUFFLE"))
    {
    	   Shuffle(ShuffledDeck);
-   	   msg.reply("Resuffled");
+   	   msg.reply("Reshuffled");
    }
    
    if(msg.content.toUpperCase().startsWith("MAO "))
