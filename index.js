@@ -567,10 +567,5 @@ client.on('message', msg => {
 
 
 
-
-//615967798488858624
-
-
-
-
-client.login('NjM3ODM3NTExNjgyNDI0ODMz.XbUB8g.fqnRq_qBQYXQi9uRNygr1nx5Jr0');
+token = require("./token.json")
+client.login(token);
